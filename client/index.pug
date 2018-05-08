@@ -1,0 +1,23 @@
+doctype html
+html
+    head
+        title {{title}}
+        link(href='css/style.css', rel='stylesheet')
+        link(href='css/index.css', rel='stylesheet')
+        body
+            div.header
+                h1.h1-class Bug loading success
+            div.content
+                h2#h2-id Bug h2 success loading
+                form.form(method='POST', action='/articles/add')
+                    #form-group
+                        label Tile
+                            input.form-control(name='title', type='text', required)
+                        label Name
+                            input.form-control(name='author', type='text', required)
+                        label Body
+                            textarea.form-control(name='body')
+                        input.btn(type='submit')
+            div.footer
+                
+        script(src='js/main.js')
