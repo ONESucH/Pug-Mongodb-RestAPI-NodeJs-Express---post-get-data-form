@@ -84,10 +84,19 @@ app.get('/articles/add', (req, res) => {
 });
 
 app.post('/articles/add', (req, res) => {
-    /*let article = new Article();
-    article.title = req.body.title;*/
-    console.log(req.body.title);
-    return;
+    let article = new Article();
+    article.title = req.body.title;
+    article.author = req.body.author;
+    article.body = req.body.body;
+    
+    article.save((err) => {
+        if (err) {
+            console.log('err');
+            return;
+        } else {
+            res.redirect('/');
+        }
+    })
 });
 
 /*const articles = require('./routes/articles'),
