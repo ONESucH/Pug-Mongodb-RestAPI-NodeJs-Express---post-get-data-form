@@ -1,7 +1,7 @@
 'use strict';
 
 const mongoose = require('mongoose'),
-    ArticlesShema = mongoose.Schema({
+    ArticleShema = mongoose.Schema({
         title: {
             type: String,
             required: true
@@ -9,6 +9,11 @@ const mongoose = require('mongoose'),
         author: {
             type: String,
             required: true
+        },
+        body: {
+            type: String,
+            required: true
         }
-    }),
-    Article = module.exports = mongoose.model('Articles', ArticlesShema);
+    });
+
+module.exports = mongoose.model('Article', ArticleShema);

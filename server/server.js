@@ -98,8 +98,8 @@ app.post('/articles/add', (req, res) => {
         }
     })
 });
-
-/*const articles = require('./routes/articles'),
+/*
+const articles = require('./routes/articles'),
     users = require('./routes/users');
 app.use('/articles', articles);
 app.use('/users', users);*/
